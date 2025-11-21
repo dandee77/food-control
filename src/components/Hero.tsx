@@ -43,9 +43,19 @@ export const Hero = () => {
     name: 'Dessert',
     image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80'
   }];
-  return <div className="relative bg-gradient-to-r from-primaryDark to-primary pt-24 pb-20 md:pt-32 md:pb-32 overflow-hidden">
+  return <div className="relative pt-24 pb-20 md:pt-32 md:pb-32 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1653220329192-ce4d725d352a?q=60&w=1200&h=800&auto=format&fit=crop&ixlib=rb-4.1.0" 
+          alt="Restaurant kitchen" 
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primaryDark/90 to-primary/90" />
+      </div>
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-10">
         <motion.div initial={{
         opacity: 0
       }} animate={{
@@ -62,7 +72,7 @@ export const Hero = () => {
         delay: 0.3
       }} className="absolute -bottom-32 -left-20 w-80 h-80 bg-accent rounded-full blur-3xl" />
       </div>
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-20">
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="flex flex-col md:flex-row items-center">
           {/* Left Content */}
           <div className="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0">
