@@ -36,7 +36,7 @@ export const OrderDetail = () => {
         id: 1,
         name: 'Margherita Pizza',
         quantity: 2,
-        price: 14.99,
+        price: 750,
         image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=100&h=100&fit=crop',
         customization: 'Extra cheese, No onions'
       },
@@ -44,7 +44,7 @@ export const OrderDetail = () => {
         id: 2,
         name: 'Caesar Salad',
         quantity: 1,
-        price: 9.99,
+        price: 500,
         image: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?w=100&h=100&fit=crop',
         customization: 'Dressing on the side'
       },
@@ -52,17 +52,17 @@ export const OrderDetail = () => {
         id: 3,
         name: 'Garlic Bread',
         quantity: 1,
-        price: 5.99,
+        price: 300,
         image: 'https://images.unsplash.com/photo-1573140401552-3fab0b24306f?w=100&h=100&fit=crop'
       }
     ],
     pricing: {
-      subtotal: 45.96,
-      deliveryFee: 2.99,
-      serviceFee: 1.50,
-      tip: 5.00,
-      tax: 4.15,
-      total: 59.60
+      subtotal: 2300,
+      deliveryFee: 150,
+      serviceFee: 75,
+      tip: 250,
+      tax: 200,
+      total: 2975
     },
     paymentMethod: {
       type: 'Credit Card',
@@ -274,7 +274,7 @@ export const OrderDetail = () => {
                             <p className="text-xs text-textLight mt-1">{item.customization}</p>
                           )}
                         </div>
-                        <span className="font-bold text-primary">${item.price.toFixed(2)}</span>
+                        <span className="font-bold text-primary">₱{item.price}</span>
                       </div>
                       <span className="text-sm text-textLight">Qty: {item.quantity}</span>
                     </div>
@@ -293,28 +293,28 @@ export const OrderDetail = () => {
               <div className="space-y-4">
                 <div className="flex justify-between text-textLight">
                   <span>Subtotal</span>
-                  <span>${order.pricing.subtotal.toFixed(2)}</span>
+                  <span>₱{order.pricing.subtotal}</span>
                 </div>
                 <div className="flex justify-between text-textLight">
                   <span>Delivery Fee</span>
-                  <span>${order.pricing.deliveryFee.toFixed(2)}</span>
+                  <span>₱{order.pricing.deliveryFee}</span>
                 </div>
                 <div className="flex justify-between text-textLight">
                   <span>Service Fee</span>
-                  <span>${order.pricing.serviceFee.toFixed(2)}</span>
+                  <span>₱{order.pricing.serviceFee}</span>
                 </div>
                 <div className="flex justify-between text-textLight">
                   <span>Tip</span>
-                  <span className="text-green-600">${order.pricing.tip.toFixed(2)}</span>
+                  <span className="text-green-600">₱{order.pricing.tip}</span>
                 </div>
                 <div className="flex justify-between text-textLight">
                   <span>Tax</span>
-                  <span>${order.pricing.tax.toFixed(2)}</span>
+                  <span>₱{order.pricing.tax}</span>
                 </div>
                 <div className="border-t-2 border-gray-200 pt-4 flex justify-between items-center">
                   <span className="text-xl font-bold text-textDark">Total</span>
                   <span className="text-2xl font-bold text-primary">
-                    ${order.pricing.total.toFixed(2)}
+                    ₱{order.pricing.total}
                   </span>
                 </div>
                 <div className="mt-4 flex items-center gap-3 p-4 bg-backgroundAlt rounded-xl">

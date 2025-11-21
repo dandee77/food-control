@@ -11,7 +11,7 @@ export const PromoSection = () => {
   }, {
     id: 2,
     title: 'Free Delivery All Weekend',
-    description: 'Order over $15 and pay no delivery fee',
+    description: 'Order over ₱750 and pay no delivery fee',
     image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=300&q=80',
     color: 'from-secondary to-amber-500'
   }, {

@@ -12,7 +12,7 @@ export const FeaturedRestaurants = () => {
     cuisine: 'American, Burgers',
     rating: 4.8,
     deliveryTime: '15-25 min',
-    deliveryFee: '$1.99',
+    deliveryFee: '₱100',
     promoCode: '30% OFF'
   }, {
     id: 2,
@@ -21,7 +21,7 @@ export const FeaturedRestaurants = () => {
     cuisine: 'Japanese, Sushi',
     rating: 4.9,
     deliveryTime: '25-35 min',
-    deliveryFee: '$2.99'
+    deliveryFee: '₱150'
   }, {
     id: 3,
     name: 'Pizza Express',
@@ -29,7 +29,7 @@ export const FeaturedRestaurants = () => {
     cuisine: 'Italian, Pizza',
     rating: 4.7,
     deliveryTime: '20-30 min',
-    deliveryFee: '$1.49',
+    deliveryFee: '₱75',
     promoCode: 'FREE DELIVERY'
   }, {
     id: 4,
@@ -38,7 +38,7 @@ export const FeaturedRestaurants = () => {
     cuisine: 'Mexican, Tacos',
     rating: 4.6,
     deliveryTime: '20-35 min',
-    deliveryFee: '$1.99'
+    deliveryFee: '₱100'
   }, {
     id: 5,
     name: 'Noodle House',
@@ -46,7 +46,7 @@ export const FeaturedRestaurants = () => {
     cuisine: 'Asian, Noodles',
     rating: 4.5,
     deliveryTime: '25-40 min',
-    deliveryFee: '$2.49'
+    deliveryFee: '₱125'
   }, {
     id: 6,
     name: 'Salad Bar',
@@ -54,7 +54,7 @@ export const FeaturedRestaurants = () => {
     cuisine: 'Healthy, Salads',
     rating: 4.7,
     deliveryTime: '15-25 min',
-    deliveryFee: '$1.99',
+    deliveryFee: '₱100',
     promoCode: 'BUY 1 GET 1'
   }];
   return <section className="section-padding">

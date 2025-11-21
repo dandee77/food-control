@@ -15,28 +15,28 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
     id: 2,
     name: 'Pepperoni Pizza',
     restaurant: "Tony's Pizzeria",
-    price: 15.99,
+    price: 800,
     rating: 4.8,
     image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop'
   }, {
     id: 3,
     name: 'Veggie Supreme',
     restaurant: "Tony's Pizzeria",
-    price: 14.99,
+    price: 750,
     rating: 4.7,
     image: 'https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=400&h=300&fit=crop'
   }, {
     id: 4,
     name: 'BBQ Chicken Pizza',
     restaurant: "Tony's Pizzeria",
-    price: 16.99,
+    price: 850,
     rating: 4.9,
     image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop'
   }, {
     id: 5,
     name: 'Hawaiian Pizza',
     restaurant: "Tony's Pizzeria",
-    price: 14.99,
+    price: 750,
     rating: 4.6,
     image: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=400&h=300&fit=crop'
   }];
@@ -83,7 +83,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
               <p className="text-sm text-textLight mb-3">{item.restaurant}</p>
               <div className="flex items-center justify-between">
                 <span className="text-lg font-bold text-primary">
-                  ${item.price}
+                  ₱{item.price}
                 </span>
                 <div className="flex items-center">
                   <StarIcon size={14} className="fill-secondary text-secondary mr-1" />

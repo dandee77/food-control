@@ -23,58 +23,58 @@ export const FoodCustomization = () => {
   }, {
     id: 'large',
     name: 'Large (14")',
-    price: 3.0
+    price: 150
   }];
   const extras = [{
     id: 'extra-cheese',
     name: 'Extra Cheese',
-    price: 2.5,
+    price: 125,
     icon: '🧀'
   }, {
     id: 'mushrooms',
     name: 'Mushrooms',
-    price: 1.5,
+    price: 75,
     icon: '🍄'
   }, {
     id: 'olives',
     name: 'Olives',
-    price: 1.5,
+    price: 75,
     icon: '🫒'
   }, {
     id: 'peppers',
     name: 'Bell Peppers',
-    price: 1.5,
+    price: 75,
     icon: '🫑'
   }, {
     id: 'onions',
     name: 'Onions',
-    price: 1.0,
+    price: 50,
     icon: '🧅'
   }, {
     id: 'garlic',
     name: 'Extra Garlic',
-    price: 1.0,
+    price: 50,
     icon: '🧄'
   }];
   const drinks = [{
     id: 'coke',
     name: 'Coca-Cola',
-    price: 2.5,
+    price: 125,
     icon: '🥤'
   }, {
     id: 'sprite',
     name: 'Sprite',
-    price: 2.5,
+    price: 125,
     icon: '🥤'
   }, {
     id: 'water',
     name: 'Bottled Water',
-    price: 1.5,
+    price: 75,
     icon: '💧'
   }, {
     id: 'juice',
     name: 'Orange Juice',
-    price: 3.0,
+    price: 150,
     icon: '🧃'
   }];
   const toggleSection = (section: string) => {
@@ -113,7 +113,7 @@ export const FoodCustomization = () => {
                 {sizes.map(size => <button key={size.id} onClick={() => setSelectedSize(size.id)} className={`w-full flex items-center justify-between p-4 rounded-xl transition-all ${selectedSize === size.id ? 'bg-primary text-white shadow-md' : 'bg-gray-50 text-textDark hover:bg-gray-100'}`}>
                     <span className="font-medium">{size.name}</span>
                     <span className="font-bold">
-                      {size.price === 0 ? 'Included' : `+$${size.price.toFixed(2)}`}
+                      {size.price === 0 ? 'Included' : `+₱${size.price}`}
                     </span>
                   </button>)}
               </div>
@@ -154,7 +154,7 @@ export const FoodCustomization = () => {
                       {extra.name}
                     </span>
                     <span className="text-xs font-bold">
-                      +${extra.price.toFixed(2)}
+                      +₱{extra.price}
                     </span>
                   </button>)}
               </div>
@@ -195,7 +195,7 @@ export const FoodCustomization = () => {
                       <span className="font-medium">{drink.name}</span>
                     </div>
                     <span className="font-bold">
-                      +${drink.price.toFixed(2)}
+                      +₱{drink.price}
                     </span>
                   </button>)}
               </div>

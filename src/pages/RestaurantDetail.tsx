@@ -19,7 +19,7 @@ export const RestaurantDetail = () => {
     reviews: 1234,
     priceRange: '$$',
     deliveryTime: '20-30 min',
-    deliveryFee: 1.99,
+    deliveryFee: 100,
     distance: '2.3 km',
     isOpen: true,
     openingHours: {
@@ -44,7 +44,7 @@ export const RestaurantDetail = () => {
       id: 1,
       name: 'Margherita Pizza',
       description: 'Classic Italian pizza with fresh mozzarella, tomato sauce, and basil',
-      price: 14.99,
+      price: 750,
       image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=200&h=200&fit=crop',
       isPopular: true,
       rating: 4.9
@@ -52,7 +52,7 @@ export const RestaurantDetail = () => {
       id: 2,
       name: 'Pepperoni Pizza',
       description: 'Traditional pepperoni with mozzarella and tomato sauce',
-      price: 15.99,
+      price: 800,
       image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200&h=200&fit=crop',
       isPopular: true,
       rating: 4.8
@@ -63,14 +63,14 @@ export const RestaurantDetail = () => {
       id: 3,
       name: 'BBQ Chicken Pizza',
       description: 'Grilled chicken, BBQ sauce, red onions, and cilantro',
-      price: 16.99,
+      price: 850,
       image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&h=200&fit=crop',
       rating: 4.7
     }, {
       id: 4,
       name: 'Veggie Supreme',
       description: 'Bell peppers, mushrooms, onions, olives, and tomatoes',
-      price: 14.99,
+      price: 750,
       image: 'https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=200&h=200&fit=crop',
       rating: 4.6
     }]
@@ -80,7 +80,7 @@ export const RestaurantDetail = () => {
       id: 5,
       name: 'Caesar Salad',
       description: 'Crisp romaine lettuce with parmesan, croutons, and caesar dressing',
-      price: 9.99,
+      price: 500,
       image: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?w=200&h=200&fit=crop',
       rating: 4.5
     }]
@@ -90,7 +90,7 @@ export const RestaurantDetail = () => {
       id: 6,
       name: 'Italian Soda',
       description: 'Refreshing flavored soda with a splash of cream',
-      price: 3.99,
+      price: 200,
       image: 'https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=200&h=200&fit=crop',
       rating: 4.4
     }]
@@ -210,7 +210,7 @@ export const RestaurantDetail = () => {
                 <div className="text-center p-4 bg-backgroundAlt rounded-xl">
                   <TruckIcon size={20} className="mx-auto text-primary mb-2" />
                   <p className="text-sm font-bold text-textDark">
-                    ${restaurant.deliveryFee}
+                    ₱{restaurant.deliveryFee}
                   </p>
                   <p className="text-xs text-textLight">Delivery Fee</p>
                 </div>
@@ -300,7 +300,7 @@ export const RestaurantDetail = () => {
                             <div className="flex items-center justify-between">
                               <div className="flex items-center gap-3">
                                 <span className="text-xl font-bold text-primary">
-                                  ${item.price}
+                                  ₱{item.price}
                                 </span>
                                 {item.rating && <div className="flex items-center text-sm">
                                     <StarIcon size={14} className="text-secondary fill-secondary mr-1" />

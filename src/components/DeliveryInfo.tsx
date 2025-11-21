@@ -117,10 +117,10 @@ export const DeliveryInfo: React.FC<DeliveryInfoProps> = ({
               <TruckIcon size={20} className="text-green-600 mr-3" />
               <div>
                 <p className="font-semibold text-textDark">Delivery Fee</p>
-                <p className="text-sm text-textLight">Free over $20</p>
+                <p className="text-sm text-textLight">Free over ₱1,000</p>
               </div>
             </div>
-            <span className="font-bold text-green-600">$2.99</span>
+            <span className="font-bold text-green-600">₱150</span>
           </div>
         </div>
         <div className="pt-4 border-t border-gray-100">

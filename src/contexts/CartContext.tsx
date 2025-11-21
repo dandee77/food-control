@@ -34,7 +34,7 @@ export const CartProvider: React.FC<{
     id: 1,
     name: 'Margherita Pizza',
     restaurant: "Tony's Pizzeria",
-    price: 14.99,
+    price: 750,
     quantity: 1,
     image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=200&h=200&fit=crop',
     customizations: {
@@ -45,7 +45,7 @@ export const CartProvider: React.FC<{
     id: 2,
     name: 'Spicy Tuna Roll',
     restaurant: 'Sakura Sushi',
-    price: 16.5,
+    price: 825,
     quantity: 2,
     image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=200&h=200&fit=crop'
   }]);

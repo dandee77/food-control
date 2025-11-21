@@ -15,7 +15,7 @@ export const CartSidebar = () => {
     getCartCount
   } = useCart();
   const subtotal = getCartTotal();
-  const deliveryFee = subtotal > 20 ? 0 : 2.99;
+  const deliveryFee = subtotal > 1000 ? 0 : 150;
   const tax = subtotal * 0.08;
   const total = subtotal + deliveryFee + tax;
   const handleCheckout = () => {
@@ -112,7 +112,7 @@ export const CartSidebar = () => {
                             </div>}
                           <div className="flex items-center justify-between">
                             <span className="text-lg font-bold text-primary">
-                              ${(item.price * item.quantity).toFixed(2)}
+                              ₱{(item.price * item.quantity).toFixed(0)}
                             </span>
                             {/* Quantity Controls */}
                             <div className="flex items-center bg-white rounded-lg shadow-sm">
@@ -141,26 +141,26 @@ export const CartSidebar = () => {
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
                     <span className="text-textLight">Subtotal</span>
-                    <span className="font-medium">${subtotal.toFixed(2)}</span>
+                    <span className="font-medium">₱{subtotal.toFixed(0)}</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-textLight">Delivery Fee</span>
                     <span className="font-medium">
-                      {deliveryFee === 0 ? <span className="text-green-600">FREE</span> : `$${deliveryFee.toFixed(2)}`}
+                      {deliveryFee === 0 ? <span className="text-green-600">FREE</span> : `₱${deliveryFee.toFixed(0)}`}
                     </span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-textLight">Tax</span>
-                    <span className="font-medium">${tax.toFixed(2)}</span>
+                    <span className="font-medium">₱{tax.toFixed(0)}</span>
                   </div>
                   {deliveryFee > 0 && <p className="text-xs text-amber-600 bg-amber-50 p-2 rounded-lg">
-                      Add ${(20 - subtotal).toFixed(2)} more for free delivery!
+                      Add ₱{(1000 - subtotal).toFixed(0)} more for free delivery!
                     </p>}
                 </div>
                 <div className="flex justify-between items-center pt-4 border-t border-gray-300">
                   <span className="text-lg font-bold">Total</span>
                   <span className="text-2xl font-bold text-primary">
-                    ${total.toFixed(2)}
+                    ₱{total.toFixed(0)}
                   </span>
                 </div>
                 <motion.button whileHover={{

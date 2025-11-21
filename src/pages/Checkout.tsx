@@ -17,7 +17,7 @@ export const Checkout = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const subtotal = getCartTotal();
-  const deliveryFee = subtotal > 20 ? 0 : 2.99;
+  const deliveryFee = subtotal > 1000 ? 0 : 150;
   const tax = subtotal * 0.08;
   const tip = selectedTip;
   const total = subtotal + deliveryFee + tax + tip;
@@ -38,7 +38,7 @@ export const Checkout = () => {
   }, {
     id: 'wallet',
     label: 'Wallet',
-    detail: '$45.50 available',
+    detail: '₱2,275 available',
     icon: WalletIcon
   }, {
     id: 'cash',
@@ -178,9 +178,9 @@ export const Checkout = () => {
                 Add a Tip for Your Courier
               </h2>
               <div className="grid grid-cols-4 gap-3 mb-4">
-                {[0, 2, 3, 5].map(amount => <button key={amount} onClick={() => setSelectedTip(amount)} className={`py-3 rounded-xl border-2 transition-all ${selectedTip === amount ? 'border-primary bg-primary text-white' : 'border-gray-200 hover:border-gray-300'}`}>
+                {[0, 100, 150, 250].map(amount => <button key={amount} onClick={() => setSelectedTip(amount)} className={`py-3 rounded-xl border-2 transition-all ${selectedTip === amount ? 'border-primary bg-primary text-white' : 'border-gray-200 hover:border-gray-300'}`}>
                     <p className="font-bold">
-                      {amount === 0 ? 'No tip' : `$${amount}`}
+                      {amount === 0 ? 'No tip' : `₱${amount}`}
                     </p>
                   </button>)}
               </div>
@@ -227,7 +227,7 @@ export const Checkout = () => {
                           Qty: {item.quantity}
                         </span>
                         <span className="font-bold text-primary">
-                          ${(item.price * item.quantity).toFixed(2)}
+                          ₱{(item.price * item.quantity).toFixed(0)}
                         </span>
                       </div>
                     </div>
@@ -237,27 +237,27 @@ export const Checkout = () => {
               <div className="space-y-3 pt-6 border-t border-gray-200">
                 <div className="flex justify-between text-sm">
                   <span className="text-textLight">Subtotal</span>
-                  <span className="font-medium">${subtotal.toFixed(2)}</span>
+                  <span className="font-medium">₱{subtotal.toFixed(0)}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-textLight">Delivery Fee</span>
                   <span className="font-medium">
-                    {deliveryFee === 0 ? <span className="text-green-600">FREE</span> : `$${deliveryFee.toFixed(2)}`}
+                    {deliveryFee === 0 ? <span className="text-green-600">FREE</span> : `₱${deliveryFee.toFixed(0)}`}
                   </span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-textLight">Tax</span>
-                  <span className="font-medium">${tax.toFixed(2)}</span>
+                  <span className="font-medium">₱{tax.toFixed(0)}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-textLight">Courier Tip</span>
-                  <span className="font-medium">${tip.toFixed(2)}</span>
+                  <span className="font-medium">₱{tip.toFixed(0)}</span>
                 </div>
               </div>
               <div className="flex justify-between items-center pt-6 border-t border-gray-200 mb-6">
                 <span className="text-lg font-bold">Total</span>
                 <span className="text-2xl font-bold text-primary">
-                  ${total.toFixed(2)}
+                  ₱{total.toFixed(0)}
                 </span>
               </div>
               <motion.button whileHover={{

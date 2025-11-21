@@ -24,7 +24,7 @@ export const Restaurants = () => {
     reviews: 1234,
     priceRange: '$$',
     deliveryTime: '20-30 min',
-    deliveryFee: 1.99,
+    deliveryFee: 100,
     distance: '2.3 km',
     sales: '500+ orders',
     isOpen: true,
@@ -41,7 +41,7 @@ export const Restaurants = () => {
     reviews: 892,
     priceRange: '$$$',
     deliveryTime: '25-35 min',
-    deliveryFee: 2.99,
+    deliveryFee: 150,
     distance: '3.1 km',
     sales: '350+ orders',
     isOpen: true,
@@ -58,7 +58,7 @@ export const Restaurants = () => {
     reviews: 2156,
     priceRange: '$$',
     deliveryTime: '15-25 min',
-    deliveryFee: 1.49,
+    deliveryFee: 75,
     distance: '1.8 km',
     sales: '800+ orders',
     isOpen: true,
@@ -75,7 +75,7 @@ export const Restaurants = () => {
     reviews: 678,
     priceRange: '$$',
     deliveryTime: '30-40 min',
-    deliveryFee: 2.49,
+    deliveryFee: 125,
     distance: '4.2 km',
     sales: '420+ orders',
     isOpen: true,
@@ -92,7 +92,7 @@ export const Restaurants = () => {
     reviews: 945,
     priceRange: '$',
     deliveryTime: '20-30 min',
-    deliveryFee: 1.99,
+    deliveryFee: 100,
     distance: '2.7 km',
     sales: '650+ orders',
     isOpen: true,
@@ -109,7 +109,7 @@ export const Restaurants = () => {
     reviews: 534,
     priceRange: '$$',
     deliveryTime: '25-35 min',
-    deliveryFee: 2.49,
+    deliveryFee: 125,
     distance: '3.5 km',
     sales: '380+ orders',
     isOpen: false,
@@ -126,7 +126,7 @@ export const Restaurants = () => {
     reviews: 423,
     priceRange: '$$',
     deliveryTime: '15-20 min',
-    deliveryFee: 1.99,
+    deliveryFee: 100,
     distance: '1.5 km',
     sales: '290+ orders',
     isOpen: true,
@@ -143,7 +143,7 @@ export const Restaurants = () => {
     reviews: 1567,
     priceRange: '$$',
     deliveryTime: '10-15 min',
-    deliveryFee: 0.99,
+    deliveryFee: 50,
     distance: '1.2 km',
     sales: '920+ orders',
     isOpen: true,
@@ -334,7 +334,7 @@ export const Restaurants = () => {
                       <div className="text-center">
                         <TruckIcon size={16} className="mx-auto text-textLight mb-1" />
                         <p className="text-xs text-textLight">
-                          ${restaurant.deliveryFee}
+                          ₱{restaurant.deliveryFee}
                         </p>
                       </div>
                       <div className="text-center">

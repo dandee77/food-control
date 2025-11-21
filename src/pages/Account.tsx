@@ -34,7 +34,7 @@ export const Account = () => {
     id: '#12345',
     date: '2024-01-15',
     items: ['Margherita Pizza', 'Caesar Salad'],
-    total: 28.99,
+    total: 1450,
     status: 'delivered',
     restaurant: "Tony's Pizzeria",
     image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=100&h=100&fit=crop'
@@ -42,7 +42,7 @@ export const Account = () => {
     id: '#12344',
     date: '2024-01-14',
     items: ['Spicy Tuna Roll', 'Miso Soup'],
-    total: 24.5,
+    total: 1225,
     status: 'delivered',
     restaurant: 'Sakura Sushi',
     image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=100&h=100&fit=crop'
@@ -50,7 +50,7 @@ export const Account = () => {
     id: '#12343',
     date: '2024-01-13',
     items: ['Classic Cheeseburger', 'Fries', 'Coke'],
-    total: 18.99,
+    total: 950,
     status: 'delivered',
     restaurant: 'Burger Haven',
     image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=100&h=100&fit=crop'
@@ -59,28 +59,28 @@ export const Account = () => {
     id: 1,
     name: 'Margherita Pizza',
     restaurant: "Tony's Pizzeria",
-    price: 14.99,
+    price: 750,
     rating: 4.8,
     image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=200&h=200&fit=crop'
   }, {
     id: 2,
     name: 'Spicy Tuna Roll',
     restaurant: 'Sakura Sushi',
-    price: 16.5,
+    price: 825,
     rating: 4.9,
     image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=200&h=200&fit=crop'
   }, {
     id: 3,
     name: 'Butter Chicken',
     restaurant: 'Spice Route',
-    price: 14.99,
+    price: 750,
     rating: 4.8,
     image: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=200&h=200&fit=crop'
   }, {
     id: 4,
     name: 'Chocolate Lava Cake',
     restaurant: 'Sweet Treats',
-    price: 8.99,
+    price: 450,
     rating: 4.9,
     image: 'https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=200&h=200&fit=crop'
   }];
@@ -220,7 +220,7 @@ export const Account = () => {
                       <p className="text-white/80 text-sm mb-1">
                         Available Balance
                       </p>
-                      <h2 className="text-4xl font-bold">$45.50</h2>
+                      <h2 className="text-4xl font-bold">₱2,275</h2>
                     </div>
                     <WalletIcon size={48} className="opacity-20" />
                   </div>
@@ -342,7 +342,7 @@ export const Account = () => {
                               </div>
                               <div className="text-right">
                                 <p className="text-2xl font-bold text-primary">
-                                  ${order.total.toFixed(2)}
+                                  ₱{order.total.toFixed(0)}
                                 </p>
                               </div>
                             </div>
@@ -397,7 +397,7 @@ export const Account = () => {
                         </p>
                         <div className="flex items-center justify-between">
                           <span className="text-xl font-bold text-primary">
-                            ${item.price}
+                            ₱{item.price}
                           </span>
                           <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primaryDark transition-colors">
                             Add to Cart
@@ -437,7 +437,7 @@ export const Account = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[{
                   points: 500,
-                  reward: '$5 Off Next Order',
+                  reward: '₱250 Off Next Order',
                   icon: '🎁'
                 }, {
                   points: 1000,
@@ -449,7 +449,7 @@ export const Account = () => {
                   icon: '🍰'
                 }, {
                   points: 2000,
-                  reward: '$20 Off Next Order',
+                  reward: '₱1,000 Off Next Order',
                   icon: '💰'
                 }].map((reward, index) => <div key={index} className="border-2 border-gray-200 rounded-2xl p-6 hover:border-primary transition-colors">
                         <div className="text-4xl mb-3">{reward.icon}</div>

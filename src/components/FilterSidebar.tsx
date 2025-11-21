@@ -94,7 +94,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
   const clearAllFilters = () => {
     setSelectedFilters({
       categories: [],
-      priceRange: [0, 50],
+      priceRange: [0, 2500],
       dietary: [],
       rating: 0,
       sortBy: 'popular'
@@ -160,28 +160,28 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
       }}>
             <div className="flex items-center justify-between mb-3">
               <span className="text-sm text-textLight">
-                ${selectedFilters.priceRange[0]}
+                ₱{selectedFilters.priceRange[0]}
               </span>
               <span className="text-sm text-textLight">
-                ${selectedFilters.priceRange[1]}+
+                ₱{selectedFilters.priceRange[1]}+
               </span>
             </div>
-            <input type="range" min="0" max="50" value={selectedFilters.priceRange[1]} onChange={e => setSelectedFilters({
+            <input type="range" min="0" max="2500" step="50" value={selectedFilters.priceRange[1]} onChange={e => setSelectedFilters({
           ...selectedFilters,
           priceRange: [0, parseInt(e.target.value)]
         })} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary" />
             <div className="grid grid-cols-3 gap-2 mt-3">
-              {['$', '$$', '$$$'].map((price, index) => <button key={price} onClick={() => setSelectedFilters({
+              {['₱', '₱₱', '₱₱₱'].map((price, index) => <button key={price} onClick={() => setSelectedFilters({
             ...selectedFilters,
-            priceRange: [0, (index + 1) * 15]
-          })} className={`py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilters.priceRange[1] <= (index + 1) * 15 ? 'bg-primary text-white' : 'bg-gray-100 text-textLight hover:bg-gray-200'}`}>
+            priceRange: [0, (index + 1) * 750]
+          })} className={`py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilters.priceRange[1] <= (index + 1) * 750 ? 'bg-primary text-white' : 'bg-gray-100 text-textLight hover:bg-gray-200'}`}>
                   {price}
                 </button>)}
             </div>
           </motion.div>}
       </div>
       <div className="border-t border-gray-100 my-6" />
-      {/* Dietary Preferences */}
+      {/* diet filter */}
       <div className="mb-6">
         <button onClick={() => toggleSection('dietary')} className="flex items-center justify-between w-full mb-3">
           <h3 className="font-semibold text-textDark">Dietary Preferences</h3>

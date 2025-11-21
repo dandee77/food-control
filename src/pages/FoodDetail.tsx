@@ -19,7 +19,7 @@ export const FoodDetail = () => {
     id: 1,
     name: 'Margherita Pizza',
     restaurant: "Tony's Pizzeria",
-    price: 14.99,
+    price: 750,
     rating: 4.8,
     reviews: 234,
     description: 'A classic Italian masterpiece featuring San Marzano tomato sauce, fresh mozzarella di bufala, hand-picked basil leaves, and extra virgin olive oil on our signature wood-fired crust. Each pizza is crafted with love and baked to perfection in our traditional brick oven.',
@@ -143,7 +143,7 @@ export const FoodDetail = () => {
                     Price
                   </span>
                   <span className="text-4xl font-bold text-primary">
-                    ${foodItem.price.toFixed(2)}
+                    ₱{foodItem.price}
                   </span>
                 </div>
                 <div className="flex items-center bg-white rounded-2xl shadow-md">
@@ -163,7 +163,7 @@ export const FoodDetail = () => {
                   Total
                 </span>
                 <span className="text-2xl font-bold text-primary">
-                  ${(foodItem.price * quantity).toFixed(2)}
+                  ₱{(foodItem.price * quantity).toFixed(0)}
                 </span>
               </div>
             </div>
@@ -175,7 +175,7 @@ export const FoodDetail = () => {
           }} whileTap={{
             scale: 0.98
           }} className="w-full bg-primary text-white font-bold text-lg py-4 rounded-2xl shadow-lg hover:bg-primaryDark transition-colors">
-              Add to Cart - ${(foodItem.price * quantity).toFixed(2)}
+              Add to Cart - ₱{(foodItem.price * quantity).toFixed(0)}
             </motion.button>
           </motion.div>
         </div>
