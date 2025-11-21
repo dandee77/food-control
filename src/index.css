@@ -1,0 +1,45 @@
+/* URL IMPORTS (SUCH AS FONT IMPORTS) SHOULD BE KEPT ABOVE TAILWIND IMPORTS - DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED - DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
+
+:root {
+  --primary: #FF4E50;
+  --primary-dark: #E43D3F;
+  --secondary: #FFBE0B;
+  --accent: #3BCEAC;
+  --text-dark: #333333;
+  --text-light: #767676;
+  --background: #FFFFFF;
+  --background-alt: #F9F9F9;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--background);
+}
+
+.heading-font {
+  font-family: 'DM Serif Display', serif;
+}
+
+.btn-primary {
+  @apply bg-[#FF4E50] text-white font-medium px-6 py-3 rounded-full hover:bg-[#E43D3F] transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply bg-white text-[#FF4E50] border border-[#FF4E50] font-medium px-6 py-3 rounded-full hover:bg-[#FFF5F5] transition-all duration-300;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
