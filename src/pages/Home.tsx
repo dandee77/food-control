@@ -15,7 +15,7 @@ export const Home = () => {
     role: 'Food Blogger',
     image: 'https://i.pravatar.cc/150?img=1',
     rating: 5,
-    text: "FoodControl has completely transformed how I discover new restaurants! The variety is incredible and the delivery is always on time. I've found so many hidden gems through this platform.",
+    text: "Lubos na binago ng FoodControl kung paano ako nakakahanap ng mga bagong restaurant! Ang iba't ibang pagpipilian ay kahanga-hanga at palaging on time ang delivery. Nakahanap ako ng maraming hidden gems sa platform na ito.",
     restaurant: "Tony's Pizzeria"
   }, {
     id: 2,
@@ -23,7 +23,7 @@ export const Home = () => {
     role: 'Regular Customer',
     image: 'https://i.pravatar.cc/150?img=2',
     rating: 5,
-    text: 'As someone who works late hours, FoodControl is a lifesaver. The quality of food is always top-notch, and I love how easy it is to track my orders. Best food delivery service hands down!',
+    text: 'Bilang taong gumagawa ng late hours, lifesaver talaga ang FoodControl. Laging top-notch ang kalidad ng pagkain, at napakadali i-track ang mga order. Pinakamagandang food delivery service talaga!',
     restaurant: 'Sakura Sushi'
   }, {
     id: 3,
@@ -31,7 +31,7 @@ export const Home = () => {
     role: 'Busy Mom',
     image: 'https://i.pravatar.cc/150?img=3',
     rating: 5,
-    text: 'With three kids, cooking every night is tough. FoodControl makes it so easy to get delicious, healthy meals delivered. The family meal deals are perfect for us!',
+    text: 'Sa tatlong anak, ang pagluluto gabi-gabi ay mahirap. Ginagawa ng FoodControl na sobrang dali ang pagkuha ng masasarap at healthy na meals. Perpekto sa amin ang family meal deals!',
     restaurant: 'Green Bowl'
   }, {
     id: 4,
@@ -39,7 +39,7 @@ export const Home = () => {
     role: 'Office Manager',
     image: 'https://i.pravatar.cc/150?img=4',
     rating: 5,
-    text: 'We use FoodControl for all our office lunch orders. The group ordering feature is fantastic, and everyone loves the variety of restaurants available. Highly recommend!',
+    text: 'Ginagamit namin ang FoodControl para sa lahat ng office lunch orders. Ang group ordering feature ay napakaganda, at lahat ay gustung-gusto ang iba\'t ibang restaurants. Highly recommended!',
     restaurant: 'Burger Haven'
   }];
   return <>

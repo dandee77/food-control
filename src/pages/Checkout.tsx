@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { MapPinIcon, CreditCardIcon, ClockIcon, TruckIcon, CheckCircleIcon, ChevronRightIcon, WalletIcon, DollarSignIcon } from 'lucide-react';
 import { useCart } from '../contexts/CartContext';
+import { useAuth } from '../contexts/AuthContext';
 export const Checkout = () => {
   const navigate = useNavigate();
   const {
     cartItems,
     getCartTotal
   } = useCart();
+  const { isAuthenticated, setShowAuthModal } = useAuth();
   const [selectedAddress, setSelectedAddress] = useState('home');
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      setShowAuthModal(true);
+      navigate('/');
+    }
+  }, [isAuthenticated, setShowAuthModal, navigate]);
   const [selectedPayment, setSelectedPayment] = useState('card');
   const [selectedTip, setSelectedTip] = useState(3);
   const [deliveryTime, setDeliveryTime] = useState('asap');

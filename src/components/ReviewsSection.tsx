@@ -37,7 +37,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({
     avatar: 'https://i.pravatar.cc/150?img=1',
     rating: 5,
     date: '2 days ago',
-    comment: 'Absolutely delicious! The crust was perfectly crispy and the toppings were fresh. Best pizza I have had in NYC!',
+    comment: 'Sobrang sarap! Ang crust ay perpektong crispy at fresh ang mga toppings. Pinakamasarap na pizza na natikman ko!',
     helpful: 24,
     verified: true
   }, {
@@ -46,7 +46,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({
     avatar: 'https://i.pravatar.cc/150?img=2',
     rating: 5,
     date: '1 week ago',
-    comment: 'Amazing quality and great value. The delivery was super fast too. Highly recommend!',
+    comment: 'Kahanga-hangang kalidad at sulit na sulit. Napakabilis din ng delivery. Highly recommended!',
     helpful: 18,
     verified: true
   }, {
@@ -55,7 +55,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({
     avatar: 'https://i.pravatar.cc/150?img=3',
     rating: 4,
     date: '2 weeks ago',
-    comment: 'Very good pizza, authentic Italian taste. Only minor complaint is I wished there was more basil.',
+    comment: 'Napakasarap na pizza, tunay na Italian lasa. Ang tanging maliit na reklamo ay sana may mas maraming basil.',
     helpful: 12,
     verified: false
   }, {
@@ -64,7 +64,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({
     avatar: 'https://i.pravatar.cc/150?img=4',
     rating: 5,
     date: '3 weeks ago',
-    comment: 'This is my go-to pizza place now. Consistent quality and the staff is always friendly.',
+    comment: 'Ito na ang paborito kong pizza place ngayon. Consistent ang kalidad at palaging friendly ang staff.',
     helpful: 31,
     verified: true
   }];

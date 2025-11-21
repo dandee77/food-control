@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { UserIcon, WalletIcon, ShoppingBagIcon, HeartIcon, SettingsIcon, LogOutIcon, CreditCardIcon, MapPinIcon, BellIcon, AwardIcon, ClockIcon, CheckCircleIcon, TruckIcon, ChefHatIcon } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
 export const Account = () => {
   const navigate = useNavigate();
+  const { isAuthenticated, setShowAuthModal, logout } = useAuth();
   const [activeTab, setActiveTab] = useState('profile');
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      setShowAuthModal(true);
+      navigate('/');
+    }
+  }, [isAuthenticated, setShowAuthModal, navigate]);
   const tabs = [{
     id: 'profile',
     name: 'Profile',
@@ -130,7 +139,10 @@ export const Account = () => {
                     <tab.icon size={20} />
                     <span className="font-medium">{tab.name}</span>
                   </button>)}
-                <button className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-50 transition-all mt-4">
+                <button onClick={() => {
+                  logout();
+                  navigate('/');
+                }} className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-50 transition-all mt-4">
                   <LogOutIcon size={20} />
                   <span className="font-medium">Logout</span>
                 </button>

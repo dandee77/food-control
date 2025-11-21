@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ShoppingBagIcon, MenuIcon, XIcon, SearchIcon, MapPinIcon, UserIcon } from 'lucide-react';
 import { useCart } from '../contexts/CartContext';
+import { useAuth } from '../contexts/AuthContext';
 export const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -10,6 +11,7 @@ export const Header = () => {
     getCartCount,
     setCartOpen
   } = useCart();
+  const { isAuthenticated, setShowAuthModal } = useAuth();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const lightBackgroundPages = ['/shop', '/restaurants', '/account', '/restaurant', '/food', '/checkout', '/order'];
@@ -111,7 +113,13 @@ export const Header = () => {
           }} transition={{
             duration: 0.5,
             delay: 0.6
-          }} onClick={() => navigate('/account')} className={`p-2 rounded-full ${shouldShowLightStyle ? 'bg-gray-100 text-primary' : 'bg-white/20 text-white'}`}>
+          }} onClick={() => {
+            if (isAuthenticated) {
+              navigate('/account');
+            } else {
+              setShowAuthModal(true);
+            }
+          }} className={`p-2 rounded-full ${shouldShowLightStyle ? 'bg-gray-100 text-primary' : 'bg-white/20 text-white'}`}>
               <UserIcon size={20} />
             </motion.button>
             <motion.button initial={{
@@ -175,7 +183,11 @@ export const Header = () => {
                 <SearchIcon size={20} />
               </button>
               <button onClick={() => {
-            navigate('/account');
+            if (isAuthenticated) {
+              navigate('/account');
+            } else {
+              setShowAuthModal(true);
+            }
             setMobileMenuOpen(false);
           }} className="p-2 bg-gray-100 rounded-full text-primary">
                 <UserIcon size={20} />

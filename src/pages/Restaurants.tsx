@@ -277,7 +277,7 @@ export const Restaurants = () => {
             <h3 className="text-2xl font-bold">Featured This Week</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {restaurants.filter(r => r.featured).map((restaurant, index) => <motion.div key={restaurant.id} initial={{
+            {restaurants.filter(r => r.featured).map((restaurant, index) => <motion.div key={restaurant.id} className="relative" initial={{
             opacity: 0,
             y: 20
           }} animate={{
@@ -285,19 +285,20 @@ export const Restaurants = () => {
             y: 0
           }} transition={{
             delay: index * 0.1
-          }} onClick={() => navigate(`/restaurant/${restaurant.id}`)} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer group">
+          }} onClick={() => navigate(`/restaurant/${restaurant.id}`)}>  
+                <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer group">
                   {/* Banner */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-48 overflow-hidden rounded-t-2xl">
                     <img src={restaurant.banner} alt={restaurant.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     {restaurant.isOpen ? <div className="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                         Open Now
                       </div> : <div className="absolute top-4 left-4 bg-gray-800 text-white text-xs font-bold px-3 py-1 rounded-full">
                         Closed
                       </div>}
-                    {/* Profile Picture Overlay */}
-                    <div className="absolute -bottom-8 left-6">
-                      <img src={restaurant.profile} alt={restaurant.name} className="w-20 h-20 rounded-2xl border-4 border-white shadow-lg object-cover" />
-                    </div>
+                  </div>
+                  {/* Profile Picture Overlay */}
+                  <div className="absolute top-40 left-6 z-10">
+                    <img src={restaurant.profile} alt={restaurant.name} className="w-20 h-20 rounded-2xl border-4 border-white shadow-lg object-cover" />
                   </div>
                   {/* Content */}
                   <div className="pt-12 px-6 pb-6">
@@ -361,6 +362,7 @@ export const Restaurants = () => {
                       </span>
                     </div>
                   </div>
+                </div>
                 </motion.div>)}
           </div>
         </div>
@@ -368,7 +370,7 @@ export const Restaurants = () => {
         <div>
           <h3 className="text-2xl font-bold mb-6">All Restaurants</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {restaurants.map((restaurant, index) => <motion.div key={restaurant.id} initial={{
+            {restaurants.map((restaurant, index) => <motion.div key={restaurant.id} className="relative" initial={{
             opacity: 0,
             y: 20
           }} animate={{
@@ -376,18 +378,20 @@ export const Restaurants = () => {
             y: 0
           }} transition={{
             delay: index * 0.05
-          }} onClick={() => navigate(`/restaurant/${restaurant.id}`)} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer group">
+          }} onClick={() => navigate(`/restaurant/${restaurant.id}`)}>  
+                <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer group">
                 {/* Banner */}
-                <div className="relative h-40 overflow-hidden">
+                <div className="relative h-40 overflow-hidden rounded-t-2xl">
                   <img src={restaurant.banner} alt={restaurant.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   {restaurant.isOpen ? <div className="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                       Open
                     </div> : <div className="absolute top-3 left-3 bg-gray-800 text-white text-xs font-bold px-3 py-1 rounded-full">
                       Closed
                     </div>}
-                  <div className="absolute -bottom-6 left-4">
-                    <img src={restaurant.profile} alt={restaurant.name} className="w-16 h-16 rounded-xl border-4 border-white shadow-lg object-cover" />
-                  </div>
+                </div>
+                {/* Profile Picture Overlay */}
+                <div className="absolute top-32 left-4 z-10">
+                  <img src={restaurant.profile} alt={restaurant.name} className="w-16 h-16 rounded-xl border-4 border-white shadow-lg object-cover" />
                 </div>
                 <div className="pt-10 px-4 pb-4">
                   <div className="flex items-start justify-between mb-2">
@@ -423,6 +427,7 @@ export const Restaurants = () => {
                       {restaurant.distance}
                     </span>
                   </div>
+                </div>
                 </div>
               </motion.div>)}
           </div>

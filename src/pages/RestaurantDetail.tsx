@@ -101,7 +101,7 @@ export const RestaurantDetail = () => {
     avatar: 'https://i.pravatar.cc/150?img=1',
     rating: 5,
     date: '2 days ago',
-    comment: 'Best pizza in NYC! The crust is perfectly crispy and the ingredients are always fresh.',
+    comment: 'Pinakamasarap na pizza! Ang crust ay perpektong crispy at laging fresh ang mga ingredients.',
     helpful: 24,
     images: ['https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=300&h=200&fit=crop']
   }, {
@@ -110,7 +110,7 @@ export const RestaurantDetail = () => {
     avatar: 'https://i.pravatar.cc/150?img=2',
     rating: 5,
     date: '1 week ago',
-    comment: 'Amazing quality and great value. The delivery was super fast too!',
+    comment: 'Kahanga-hangang kalidad at sulit na sulit. Ang delivery ay napakabilis din!',
     helpful: 18
   }, {
     id: 3,
@@ -118,7 +118,7 @@ export const RestaurantDetail = () => {
     avatar: 'https://i.pravatar.cc/150?img=3',
     rating: 4,
     date: '2 weeks ago',
-    comment: 'Very good pizza, authentic Italian taste. Service was excellent.',
+    comment: 'Napakasarap na pizza, tunay na Italian lasa. Ang service ay napakahusay.',
     helpful: 12
   }];
   const tabs = [{
